@@ -1,0 +1,202 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.overlay.active {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 8;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: #96b6c5;
+}
+.container .modal {
+  position: absolute;
+  z-index: 9;
+  width: 300px;
+  background: #beadfa;
+  -webkit-box-shadow: -1px 5px 50px 33px rgba(255, 255, 255, 0.2);
+          box-shadow: -1px 5px 50px 33px rgba(255, 255, 255, 0.2);
+  height: 200px;
+  border-radius: 45px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-transition: all 0.8s;
+  transition: all 0.8s;
+  top: -100%;
+}
+.container .modal.show {
+  top: 10%;
+}
+.container .modal p {
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  display: block;
+  margin-bottom: 20px;
+  color: #fff;
+}
+.container .modal .btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+}
+.container .modal .btns button {
+  width: 50px;
+  height: 50px;
+  border-radius: 20px;
+  border: 0;
+  background: #dfccfb;
+  cursor: pointer;
+  font-size: 25px;
+}
+.container .wrap {
+  margin-bottom: 30px;
+}
+.container .wrap .bout {
+  text-align: center;
+  font-size: 25px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 25px;
+}
+.container .wrap .cells {
+  width: 400px;
+  height: 400px;
+  background: #d1d1d1;
+  -webkit-box-shadow: -1px 9px 50px -2px rgba(45, 45, 45, 0.2);
+          box-shadow: -1px 9px 50px -2px rgba(45, 45, 45, 0.2);
+  border-radius: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 18px;
+}
+.container .wrap .cells .cell {
+  background: #504099;
+  width: 118px;
+  height: 118px;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 80px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.container .wrap .cells .cell:hover {
+  background: #7258e7;
+}
+.container .restart,
+.container .restartModal {
+  border: none;
+  background: #442cad;
+  width: 120px;
+  height: 40px;
+  border-radius: 15px;
+  color: #fff;
+  font-size: 18px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  border: 2px solid #442cad;
+  font-weight: bold;
+  margin-top: 15px;
+}
+.container .restart:hover,
+.container .restartModal:hover {
+  background: transparent;
+  color: #442cad;
+}
+.container .modal-result {
+  position: absolute;
+  z-index: 9;
+  width: 300px;
+  background: #beadfa;
+  -webkit-box-shadow: -1px 5px 50px 33px rgba(255, 255, 255, 0.2);
+          box-shadow: -1px 5px 50px 33px rgba(255, 255, 255, 0.2);
+  height: 200px;
+  border-radius: 45px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-transition: all 0.8s;
+  transition: all 0.8s;
+  top: -100%;
+  font-size: 25px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.container .modal-result span {
+  position: absolute;
+  top: -20px;
+  right: -30px;
+  background: rgb(255, 0, 0);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.container .modal-result.show {
+  top: 10%;
+}
